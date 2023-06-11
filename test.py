@@ -62,8 +62,8 @@ def predict(text):
                 avg_prob = sum(probs) / len(probs)
         else:
                 avg_prob = [0, 0]
-
-    return avg_prob
+    avg_prob = avg_prob.numpy()
+    return avg_prob[0],avg_prob[1]
 from urllib.error import URLError, HTTPError
 from urllib.request import Request, urlopen
 import urllib.parse
@@ -115,8 +115,8 @@ def scrape_website(url):
     return ""  # Return an empty string if any exception occurs
 def main():
     url = input("give url")
-    predict = scrape_website(url)
-    print(predict)
+    pre0,pre1 = predict(scrape_website(url))
+    print(pre0)
 
 if __name__ == "__main__":
     main()
