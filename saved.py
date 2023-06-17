@@ -9,8 +9,8 @@ import tensorflow as tf
 
 max_length = 627
 
-tokenizer = RobertaTokenizer.from_pretrained('roberta-base-openai-detector')
-model = TFAutoModelForSequenceClassification.from_pretrained("hananeChab/mike-model")
+tokenizer = RobertaTokenizer.from_pretrained("hananeChab/mike-model-version2")
+model = TFRobertaForSequenceClassification.from_pretrained("hananeChab/mike-model-version2")
 def predict(text):
   encoded=tokenizer(text, truncation=True, padding=True, max_length=max_length, return_tensors='tf')
 
