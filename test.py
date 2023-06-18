@@ -9,8 +9,8 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification,Rober
 import tensorflow as tf
 from transformers import AutoTokenizer,TFRobertaForSequenceClassification, AutoModelForSequenceClassification,RobertaTokenizer, TFAutoModelForSequenceClassification
 
-tokenizer = RobertaTokenizer.from_pretrained("idajikuu/AI-HUMAN-detector")
-model = TFRobertaForSequenceClassification.from_pretrained("idajikuu/AI-HUMAN-detector")
+tokenizer = RobertaTokenizer.from_pretrained("hananeChab/ai-detector2")
+model = TFRobertaForSequenceClassification.from_pretrained("hananeChab/ai-detector2")
 def segment_text(text, max_length):
     segments = []
     current_segment = ""
